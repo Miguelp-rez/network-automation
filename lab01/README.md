@@ -14,12 +14,11 @@
 To erase any previous configurations use the following command on privilege mode:  
 \# write erase  
 
-To access the ubuntu host, use the following credentials:  
+To access the ubuntu host, use the following credentials:
 - username: ubuntu
 - password: cisco
 
-Copy and paste the following commands on each device to restore the initial configuration  
-
+Copy and paste the following commands on each device to restore the initial configuration
 ##### Router R1
     enable
     conf t
@@ -41,5 +40,3 @@ Copy and paste the following commands on each device to restore the initial conf
     transport input all
     int vlan 1
     ip address 192.168.255.72 255.255.255.0
-
-## Activities
