@@ -40,3 +40,6 @@ Copy and paste the following commands on each device to restore the initial conf
     transport input all
     int vlan 1
     ip address 192.168.255.72 255.255.255.0
+
+## Activities
+Test the scripts from the Ubuntu host.
