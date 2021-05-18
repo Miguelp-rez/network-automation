@@ -12,7 +12,7 @@
 ## Initial state
 
 To erase any previous configurations use the following command on privilege mode:  
-    write erase  
+\# write erase  
 
 To access the ubuntu host, use the following credentials:  
 - username: ubuntu
