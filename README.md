@@ -6,7 +6,7 @@ To recreate any of these labs you need to create an account on Cisco's DevNet [w
 
 After that, go to the free CML [sandbox](http://bit.ly/freecml) and login with your previously created account.
 
-Finally, make a reservation and follow the instructions to access the lab.  
+Finally, make a reservation and follow the instructions to access the lab (you will need to install Cisco Anyconnect Client software).  
 
 Once the sandbox is available to you, import whichever lab you want to try from this repository.
 
