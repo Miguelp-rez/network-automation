@@ -4,6 +4,9 @@
 1. Create two loopback interfaces on R1.
 2. Create 100 VLANs on S1.
 
+## Topology
+![Topology](/lab01/lab01.PNG)
+
 ## Initial state
 To erase any previous configurations use the following command on privilege mode:  
     write erase
