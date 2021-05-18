@@ -16,15 +16,13 @@ if password:
 tn.write(b"enable\n")
 tn.write(b"cisco\n")
 tn.write(b"conf t\n")
-tn.write(b"vlan 2\n")
-tn.write(b"name Python_VLAN_2\n")
-tn.write(b"vlan 6\n")
-tn.write(b"name Python_VLAN_6\n")
-tn.write(b"vlan 7\n")
-tn.write(b"name Python_VLAN_7\n")
-tn.write(b"vlan 8\n")
-tn.write(b"name Python_VLAN_8\n")
+
+for n in range (2, 101):
+    tn.write(b"vlan " + str(n).encode("ascii") + b"\n")
+    tn.write(b"name Python_VLAN_" + str(n).encode("ascii") + b"\n")
+
 tn.write(b"end\n")
+tn.write(b"wr\n")
 tn.write(b"exit\n")
 
 print(tn.read_all().decode('ascii'))
