@@ -1,9 +1,14 @@
-# Lab01: Basic device configuration  
+# Lab02: Configuration of multiple devices  
 
 ## Objectives
 
-1. Empty.
-2. Empty.
+1. Configure multiple switches with a loop.
+2. Configure multiple vlans on each switch with a loop.
+3. Backup the switches' configurations.
+
+## Topology
+
+![Topology](/lab02/lab02.PNG)
 
 ## Initial state
 
@@ -21,7 +26,7 @@ Copy and paste the following commands on each device to restore the initial conf
     conf t
     hostname R1
     enable password cisco
-    username miguel password cisco
+    username miguel privilege 15 password cisco
     line vty 0 4
     login local
     transport input all
@@ -34,7 +39,7 @@ Copy and paste the following commands on each device to restore the initial conf
     conf t
     hostname S1
     enable password cisco
-    username miguel password cisco
+    username miguel privilege 15 password cisco
     line vty 0 4
     login local
     transport input all
@@ -47,7 +52,7 @@ Copy and paste the following commands on each device to restore the initial conf
     conf t
     hostname S2
     enable password cisco
-    username miguel password cisco
+    username miguel privilege 15 password cisco
     line vty 0 4
     login local
     transport input all
@@ -60,7 +65,7 @@ Copy and paste the following commands on each device to restore the initial conf
     conf t
     hostname S3
     enable password cisco
-    username miguel password cisco
+    username miguel privilege 15 password cisco
     line vty 0 4
     login local
     transport input all
@@ -73,7 +78,7 @@ Copy and paste the following commands on each device to restore the initial conf
     conf t
     hostname S4
     enable password cisco
-    username miguel password cisco
+    username miguel privilege 15 password cisco
     line vty 0 4
     login local
     transport input all
@@ -86,7 +91,7 @@ Copy and paste the following commands on each device to restore the initial conf
     conf t
     hostname S5
     enable password cisco
-    username miguel password cisco
+    username miguel privilege 15 password cisco
     line vty 0 4
     login local
     transport input all
@@ -99,7 +104,7 @@ Copy and paste the following commands on each device to restore the initial conf
     conf t
     hostname S6
     enable password cisco
-    username miguel password cisco
+    username miguel privilege 15 password cisco
     line vty 0 4
     login local
     transport input all
