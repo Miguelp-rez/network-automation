@@ -2,9 +2,10 @@
 
 ## Objectives
 
-1. Establish an ssh connection to S1, using netmiko.
-2. Configure S1, S2 and S3 using netmiko.
-3. Configure S4, S5 and S6 with a file of commands.
+1. Use netmiko to configure a single switch.
+2. Use netmiko to configure multiple switches.
+3. Configure access switches with iosv_l2_cisco_design file.
+4. Configure core switches with iosv_l2_core file.
 
 ## Topology
 
