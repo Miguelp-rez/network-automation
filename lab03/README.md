@@ -126,7 +126,7 @@ Copy and paste the following commands on each device to restore the initial conf
     no shut
 
 ## Activities
-Install netmiko  
+Install netmiko
     sudo apt-get install python3-pip
     sudo pip3 install -U netmiko
 
