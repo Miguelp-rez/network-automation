@@ -9,7 +9,7 @@
 
 ## Topology
 
-![Topology](/lab02/lab02.PNG)
+![Topology](/lab03/lab03.PNG)
 
 ## Initial state
 
