@@ -2,9 +2,9 @@
 
 ## Objectives
 
-1. Empty.
-2. Empty.
-3. Empty.
+1. Establish an ssh connection to S1, using netmiko.
+2. Configure S1, S2 and S3 using netmiko.
+3. Configure S4, S5 and S6 with a file of commands.
 
 ## Topology
 
@@ -125,4 +125,8 @@ Copy and paste the following commands on each device to restore the initial conf
     no shut
 
 ## Activities
+Install netmiko  
+    sudo apt-get install python3-pip
+    sudo pip3 install -U netmiko
+
 Test the scripts from the Ubuntu host.

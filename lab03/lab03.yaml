@@ -1,8 +1,8 @@
 lab:
   description: ''
   notes: ''
-  timestamp: 1621444866.617558
-  title: lab01.yaml
+  timestamp: 1621452198.4762473
+  title: lab03.yaml
   version: 0.0.3
 nodes:
   - id: n0
@@ -309,6 +309,63 @@ nodes:
         slot: 3
         label: GigabitEthernet0/3
         type: physical
+  - id: n10
+    label: desktop-0
+    node_definition: desktop
+    x: -400
+    y: 200
+    configuration: |-
+      # this is a shell script which will be sourced at boot
+      # if you change the hostname then you need to add a
+      # /etc/hosts entry as well to make X11 happy
+      # hostname inserthostname_here
+      # like this:
+      # echo "127.0.0.1   inserthostname_here" >>/etc/hosts
+    image_definition: desktop
+    tags: []
+    interfaces:
+      - id: i0
+        slot: 0
+        label: eth0
+        type: physical
+  - id: n11
+    label: desktop-1
+    node_definition: desktop
+    x: -250
+    y: 200
+    configuration: |-
+      # this is a shell script which will be sourced at boot
+      # if you change the hostname then you need to add a
+      # /etc/hosts entry as well to make X11 happy
+      # hostname inserthostname_here
+      # like this:
+      # echo "127.0.0.1   inserthostname_here" >>/etc/hosts
+    image_definition: desktop
+    tags: []
+    interfaces:
+      - id: i0
+        slot: 0
+        label: eth0
+        type: physical
+  - id: n12
+    label: desktop-2
+    node_definition: desktop
+    x: -100
+    y: 200
+    configuration: |-
+      # this is a shell script which will be sourced at boot
+      # if you change the hostname then you need to add a
+      # /etc/hosts entry as well to make X11 happy
+      # hostname inserthostname_here
+      # like this:
+      # echo "127.0.0.1   inserthostname_here" >>/etc/hosts
+    image_definition: desktop
+    tags: []
+    interfaces:
+      - id: i0
+        slot: 0
+        label: eth0
+        type: physical
 links:
   - id: l1
     i1: i2
@@ -395,3 +452,18 @@ links:
     n1: n8
     i2: i3
     n2: n9
+  - id: l17
+    i1: i4
+    n1: n6
+    i2: i0
+    n2: n10
+  - id: l18
+    i1: i4
+    n1: n7
+    i2: i0
+    n2: n11
+  - id: l19
+    i1: i4
+    n1: n9
+    i2: i0
+    n2: n12
