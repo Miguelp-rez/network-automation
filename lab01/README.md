@@ -22,6 +22,7 @@ Copy and paste the following commands on each device to restore the initial conf
 ##### Router R1
     enable
     conf t
+    hostname R1
     enable password cisco
     username miguel password cisco
     line vty 0 4
@@ -29,10 +30,12 @@ Copy and paste the following commands on each device to restore the initial conf
     transport input all
     int gi 0/0
     ip address 192.168.255.71 255.255.255.0
+    no shut
 
 ##### Switch S1
     enable
     conf t
+    hostname S1
     enable password cisco
     username miguel password cisco
     line vty 0 4
@@ -40,6 +43,7 @@ Copy and paste the following commands on each device to restore the initial conf
     transport input all
     int vlan 1
     ip address 192.168.255.72 255.255.255.0
+    no shut
 
 ## Activities
 Test the scripts from the Ubuntu host.
