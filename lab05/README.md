@@ -34,6 +34,9 @@ Copy and paste the following commands on each device to restore the initial conf
     line vty 0 4
     login local
     transport input all
+    int gi 0/0
+    ip address 192.168.255.71 255.255.255.0
+    no shut
     int gi 0/1
     ip address 17.1.1.1 255.255.255.0
     no shut
@@ -59,6 +62,7 @@ Copy and paste the following commands on each device to restore the initial conf
     no shut
     router bgp 65001
     neighbor 17.1.1.1 remote-as 65001
+    neighbor 8.8.8.2 remote-as 65002
 
 ##### Router R3
     enable
@@ -79,6 +83,7 @@ Copy and paste the following commands on each device to restore the initial conf
     no shut
     router bgp 65002
     neighbor 15.1.1.2 remote-as 65002
+    neighbor 8.8.8.1 remote-as 65001
 
 ##### Router R4
     enable
