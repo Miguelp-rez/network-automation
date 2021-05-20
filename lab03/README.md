@@ -128,7 +128,9 @@ Copy and paste the following commands on each device to restore the initial conf
 ## Activities
 Install netmiko on the Ubuntu host.
 
+    sudo apt-get update
     sudo apt-get install python3-pip
+    sudo python3 -m pip install -U pip
     sudo pip3 install -U netmiko
 
 Test the scripts from the Ubuntu host.
