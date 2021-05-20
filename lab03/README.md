@@ -20,6 +20,10 @@ To access the ubuntu host, use the following credentials:
 - username: ubuntu
 - password: cisco
 
+To access end user devices, use the following credentials:
+- username: cisco
+- password: cisco
+
 Copy and paste the following commands on each device to restore the initial configuration
 
 ##### Router R1
