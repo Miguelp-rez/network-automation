@@ -42,6 +42,7 @@ Copy and paste the following commands on each device to restore the initial conf
     no shut
     router bgp 65001
     neighbor 17.1.1.2 remote-as 65001
+    network 192.168.255.0 mask 255.255.255.0
 
 ##### Router R2
     enable
@@ -63,6 +64,8 @@ Copy and paste the following commands on each device to restore the initial conf
     router bgp 65001
     neighbor 17.1.1.1 remote-as 65001
     neighbor 8.8.8.2 remote-as 65002
+    network 8.8.8.0 mask 255.255.255.0
+    network 17.1.1.0 mask 255.255.255.0
 
 ##### Router R3
     enable
@@ -84,6 +87,8 @@ Copy and paste the following commands on each device to restore the initial conf
     router bgp 65002
     neighbor 15.1.1.2 remote-as 65002
     neighbor 8.8.8.1 remote-as 65001
+    network 8.8.8.0 mask 255.255.255.0
+    network 15.1.1.0 mask 255.255.255.0
 
 ##### Router R4
     enable
@@ -110,5 +115,11 @@ Install netmiko and NAPALM on the Ubuntu host.
     sudo python3 -m pip install -U pip
     pip3 install -U netmiko
     pip3 install -U napalm
+
+Reboot the ubuntu host, and then change the default gateway
+    
+    sudo reboot
+    ifconfig enp0s2 up 192.168.255.10 netmask 255.255.255.0
+    route add -net 0.0.0.0/0 gw 192.168.255.71 dev enp0s2
 
 Test the scripts from the Ubuntu host.
