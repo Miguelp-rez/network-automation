@@ -44,7 +44,9 @@ interface range GigabitEthernet 0/1 - 2
  switchport mode trunk
  switchport nonegotiate
  switchport trunk allowed vlan all
-
+ ip arp inspection trust
+ ip dhcp snooping trust
+ 
 interface GigabitEthernet 0/3
  switchport
  switchport access vlan 100
