@@ -5,7 +5,6 @@
 1. Get facts about S1 using NAPALM.
 2. Get interface information about S1.
 3. Get the mac address table and the arp cache on S1.
-4. Empty.
 
 ## Topology
 
