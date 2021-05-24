@@ -10,4 +10,4 @@ Finally, make a reservation and follow the instructions to access the lab (you w
 
 Once the sandbox is available to you, import whichever lab you want to try from this repository.
 
-**Disclaimer:** All of these labs are based on David Bombal's *Python Network Programming For Network Engineers Python 3* udemy [course](https://www.udemy.com/course/python-network-programming-for-network-engineers-python-3/).
+**Disclaimer:** All of these labs are based on David Bombal's *Python Network Programming For Network Engineers (Python 3)* udemy [course](https://www.udemy.com/course/python-network-programming-for-network-engineers-python-3/).
