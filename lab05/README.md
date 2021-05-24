@@ -2,11 +2,8 @@
 
 ## Objectives
 
-1. Empty.
-2. Empty.
-3. Empty.
-4. Empty.
-5. Empty.
+1. Retrieve BGP information from R2.
+2. Get BGP neighbor information from all routers.
 
 ## Topology
 
@@ -43,6 +40,7 @@ Copy and paste the following commands on each device to restore the initial conf
     router bgp 65001
     neighbor 17.1.1.2 remote-as 65001
     network 192.168.255.0 mask 255.255.255.0
+    network 17.1.1.1 mask 255.255.255.0
 
 ##### Router R2
     enable
@@ -106,6 +104,7 @@ Copy and paste the following commands on each device to restore the initial conf
     no shut
     router bgp 65002
     neighbor 15.1.1.1 remote-as 65002
+    network 15.1.1.0 mask 255.255.255.0
 
 ## Activities
 Install netmiko and NAPALM on the Ubuntu host.
@@ -116,10 +115,8 @@ Install netmiko and NAPALM on the Ubuntu host.
     pip3 install -U netmiko
     pip3 install -U napalm
 
-Reboot the ubuntu host, and then change the default gateway
+Change the default gateway
     
-    sudo reboot
-    ifconfig enp0s2 up 192.168.255.10 netmask 255.255.255.0
     route add -net 0.0.0.0/0 gw 192.168.255.71 dev enp0s2
 
 Test the scripts from the Ubuntu host.
