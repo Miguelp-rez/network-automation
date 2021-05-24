@@ -1,8 +1,8 @@
 lab:
   description: ''
   notes: ''
-  timestamp: 1621530782.4502618
-  title: lab03.yaml
+  timestamp: 1621877874.5108154
+  title: lab05.yaml
   version: 0.0.3
 nodes:
   - id: n0
@@ -106,7 +106,7 @@ nodes:
         label: port7
         type: physical
   - id: n1
-    label: iosv-0
+    label: R2
     node_definition: iosv
     x: -350
     y: -250
@@ -134,7 +134,7 @@ nodes:
         label: GigabitEthernet0/3
         type: physical
   - id: n5
-    label: iosv-1
+    label: R3
     node_definition: iosv
     x: -200
     y: -250
@@ -162,7 +162,7 @@ nodes:
         label: GigabitEthernet0/3
         type: physical
   - id: n6
-    label: iosv-2
+    label: R4
     node_definition: iosv
     x: -50
     y: -250
