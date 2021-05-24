@@ -2,8 +2,10 @@
 
 ## Objectives
 
-1. Empty.
-2. Empty.
+1. Create ACL 100 on S1.
+2. Compare existing configurations on S1 before commiting new changes.
+3. Use multiple configuration files on the same script.
+4. Configure multiple devices with multiple configuration files with one script.
 
 ## Topology
 
@@ -23,6 +25,7 @@ Copy and paste the following commands on each device to restore the initial conf
 ##### Router R1
     enable
     conf t
+    ip scp server enable 
     hostname R1
     ip domain-name csco.com
     crypto key generate rsa modulus 1024
@@ -38,6 +41,7 @@ Copy and paste the following commands on each device to restore the initial conf
 ##### Switch S1
     enable
     conf t
+    ip scp server enable 
     hostname S1
     ip domain-name csco.com
     crypto key generate rsa modulus 1024
