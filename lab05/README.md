@@ -40,7 +40,7 @@ Copy and paste the following commands on each device to restore the initial conf
     router bgp 65001
     neighbor 17.1.1.2 remote-as 65001
     network 192.168.255.0 mask 255.255.255.0
-    network 17.1.1.1 mask 255.255.255.0
+    network 17.1.1.0 mask 255.255.255.0
 
 ##### Router R2
     enable
