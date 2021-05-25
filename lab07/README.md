@@ -2,11 +2,12 @@
 
 ## Objectives
 
-1. Empty.
-2. Empty.
-3. Empty.
-4. Empty.
-5. Empty.
+1. Send a single command to switch S1.
+2. Send a file of commands to switch S1.
+3. Configure multiple devices using a file of IP addresses.
+4. Prompt the user for her credentials.
+5. Add error handling to the script.
+6. Run device specific commands based on the software version found.
 
 ## Topology
 
