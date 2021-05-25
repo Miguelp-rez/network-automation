@@ -85,7 +85,7 @@ Copy and paste the following commands on each device to restore the initial conf
     no shut
 
 ## Activities
-Install netmiko and NAPALM on the Ubuntu host.
+Install netmiko and on the Ubuntu host.
 
     sudo apt-get update
     sudo apt-get install python3-pip
