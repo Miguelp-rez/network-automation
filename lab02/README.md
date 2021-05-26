@@ -2,9 +2,8 @@
 
 ## Objectives
 
-1. Configure multiple switches with a loop.
-2. Configure multiple vlans on each switch with a loop.
-3. Backup the switches' configurations.
+1. Configure multiple vlans on each switch with a loop.
+2. Backup the switches' configurations.
 
 ## Topology
 
