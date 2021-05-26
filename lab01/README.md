@@ -4,6 +4,7 @@
 
 1. Create two loopback interfaces on R1.
 2. Create 100 VLANs on S1.
+3. Get version information from both R1 and S1.
 
 ## Topology
 
