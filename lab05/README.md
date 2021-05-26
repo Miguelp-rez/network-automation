@@ -119,4 +119,6 @@ Change the default gateway
     
     route add -net 0.0.0.0/0 gw 192.168.255.71 dev enp0s2
 
-Test the scripts from the Ubuntu host.
+Test the scripts from the Ubuntu host.  
+
+**NOTE:** The script number indicates which objective is being accomplished.

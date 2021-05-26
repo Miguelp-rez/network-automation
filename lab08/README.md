@@ -107,4 +107,6 @@ Install netmiko on the Ubuntu host.
     pip3 install -U netmiko
     pip3 install -U simple-crypt
 
-Test the scripts from the Ubuntu host.
+Test the scripts from the Ubuntu host.  
+
+**NOTE:** The script number indicates which objective is being accomplished.

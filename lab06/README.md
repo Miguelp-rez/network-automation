@@ -63,4 +63,6 @@ Install netmiko and NAPALM on the Ubuntu host.
     pip3 install -U netmiko
     pip3 install -U napalm
     
-Test the scripts from the Ubuntu host.
+Test the scripts from the Ubuntu host.  
+
+**NOTE:** The script number indicates which objective is being accomplished.  

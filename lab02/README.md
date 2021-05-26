@@ -112,4 +112,6 @@ Copy and paste the following commands on each device to restore the initial conf
     no shut
 
 ## Activities
-Test the scripts from the Ubuntu host.
+Test the scripts from the Ubuntu host.  
+
+**NOTE:** The script number indicates which objective is being accomplished.

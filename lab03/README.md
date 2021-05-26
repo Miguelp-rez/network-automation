@@ -137,4 +137,6 @@ Install netmiko on the Ubuntu host.
     python3 -m pip install -U pip
     pip3 install -U netmiko
 
-Test the scripts from the Ubuntu host.
+Test the scripts from the Ubuntu host.  
+
+**NOTE:** The script number indicates which objective is being accomplished.
