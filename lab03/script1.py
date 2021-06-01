@@ -7,6 +7,9 @@ iosv_l2 = {
     "password": "cisco"
 }
 
+# ---- Dictionary unpacking ----
+# the ** operator unpacks dictionaries into arguments 
+# whose names match the keys of the unpacked dictionary
 net_connect = ConnectHandler(**iosv_l2)
 output = net_connect.send_command("show ip int brief")
 print (output)
