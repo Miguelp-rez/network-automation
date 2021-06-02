@@ -1,22 +1,18 @@
-from simplecrypt import encrypt, decrypt
-from pprint import pprint
-import csv
+from simplecrypt import decrypt
 import json
 
-#---- Read in pertinent information from user
-encrypted_credentials = input('\nInput CSV filename [encrypted-device-creds]:  ') or 'encrypted-device-creds'
+#---- Prompt the user for a filename and a key
+encrypted_credentials = input('\nInput filename [encrypted-device-creds]:  ') or 'encrypted-device-creds'
 key = input('Encryption key [cisco]:  ') or 'cisco'
 
-#---- Read in the device credentials from CSV file into list of device credentials
+#---- Read in the encrypted credentials file as binary
 print ('\n... getting credentials ...\n')
 with open( encrypted_credentials, 'rb') as input_file:
-    device_creds_json = decrypt( key, input_file.read() )
+    cyphertext = input_file.read() # Encrypted file contents
+    plaintext = decrypt( key, cyphertext ) # Plaintext is a bunch of bytes
 
-device_creds_list = json.loads( device_creds_json.decode('utf-8'))
-pprint( device_creds_list )
+plaintext = plaintext.decode('utf-8') # Convert bytes to utf-8
 
-print ('\n----- confirm: device_creds json in -----------------------------------')
-
-# convert to dictionary of lists using dictionary comprehension
-device_creds = { dev[0]:dev for dev in device_creds_list } # Whats happening?
-pprint( device_creds )
+print ('\n---------- Plaintext credentials----------')
+device_creds = json.loads( plaintext ) # Create a list of lists
+print( json.dumps( device_creds ) ) # This is what was decrypted
