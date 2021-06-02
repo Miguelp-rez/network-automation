@@ -4,6 +4,7 @@
 
 0. Encrypt and decrypt user credentials.
 1. Get the running configuration from all devices in the topology.
+2. Use multithreading to reduce the execution time of the script.
 
 ## Topology
 
