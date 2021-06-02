@@ -4,7 +4,12 @@ from netmiko import ConnectHandler
 import json
 from time import time
 
-import threading
+# Thread poools limit the number of simultaneous threads, which is very
+# useful when connecting to hundreds or thousands of devices. Let's say
+# the maximum number of threads is two, this script will simultaneously 
+# connect to two devices, then another two and so on.
+ 
+from multiprocessing.dummy import Pool as ThreadPool
 
 #------------------------------------------------------------------------------
 def read_devices( devices_filename ):
@@ -50,8 +55,12 @@ def read_device_creds( encrypted_credentials, key ):
     return device_creds
 
 #------------------------------------------------------------------------------
-# This function receives two dictionaries as parameters
-def config_worker( device, creds ):
+# This function a list of dictionaries
+def config_worker( device_and_creds ):
+    
+    # Split the list into two separate dictionaries
+    device = device_and_creds[0]
+    creds = device_and_creds[1]
 
     #---- Connect to the device ----
     if   device['type'] == 'junos-srx': device_type = 'juniper'
@@ -109,26 +118,27 @@ devices = read_devices( 'devices-file' )
 # The value is a dictionary with more connection parameters
 creds   = read_device_creds( 'encrypted-device-creds', 'cisco' ) 
 
+# Ask the user for the maximum number os threads
+num_threads_str = input( '\nNumber of threads (5): ' ) or '5'
+num_threads     = int( num_threads_str )
+
+
+#---- Create a list of tuples. Each tuple contains config_worker parameters 
+config_params_list = []
+for ipaddr,device in devices.items():
+   config_params_list.append( ( device, creds[ipaddr] ) )
+
+
+# Begin timer
 starting_time = time()
 
-print ('\n---- Begin multithreading execution ------\n')
+print ('\n---- Begin thread pool execution ------\n')
 
-# Create a list of threads
-config_threads_list = []
+print ('\n--- Creating threadpool, launching get config threads\n')
+# Create a thread pool
+threads = ThreadPool( num_threads )
+# Map each tread to one config_worker call
+results = threads.map( config_worker, config_params_list )
 
-# items() returns a sequence of (key, value) tuples
-for ipaddr,device in devices.items():
-    print ('Creating thread for: ', device)
-    config_threads_list.append( threading.Thread( target=config_worker, args=(device, creds[ipaddr] ) ) )
-
-print ('\n---- Begin get config threading ----\n')
- # Start all threads (one by one)
-for config_thread in config_threads_list:
-    config_thread.start()
-
-# Wait until all thread terminate. Pause here.
-for config_thread in config_threads_list:
-    config_thread.join()
-
-# Continue
+# End timer
 print ('\n---- End get config sequential, elapsed time=', time()-starting_time)
